@@ -7,13 +7,13 @@ import org.springframework.context.ApplicationContext;
 @SpringBootApplication
 public class SpringIn5StepsApplication {
 
-	public static void main(String[] args) {
-		System.out.println("hello!");
-		ApplicationContext context = SpringApplication.run(SpringIn5StepsApplication.class, args);
-		
-		BinarySearchImpl searchImpl = context.getBean(BinarySearchImpl.class);
-		
-		searchImpl.binarySearch(new int[] {1,3,2},5);
-	}
+    public static void main(String[] args) {
+        System.out.println("hello!");
+        ApplicationContext context = SpringApplication.run(SpringIn5StepsApplication.class, args);
+
+        BinarySearchImpl searchImpl = context.getBean(BinarySearchImpl.class);
+
+        searchImpl.binarySearch(new int[]{12, 4, 6}, 5);
+    }
 
 }
