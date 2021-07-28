@@ -8,10 +8,14 @@ import org.springframework.context.ApplicationContext;
 public class SpringIn5StepsApplication {
 
     public static void main(String[] args) {
-        System.out.println("hello!");
+
+        System.out.println("hello world!");
         ApplicationContext context = SpringApplication.run(SpringIn5StepsApplication.class, args);
 
-        BinarySearchImpl searchImpl = context.getBean(BinarySearchImpl.class);
+        //we can supply any sortAlgo we want
+        BinarySearchImpl searchImpl = new BinarySearchImpl(new QuickSortAlgorithm());
+
+        //prints com.henry.spring.basics.springin5steps.QuickSortAlgorithm@72ccd81a
 
         searchImpl.binarySearch(new int[]{12, 4, 6}, 5);
     }
