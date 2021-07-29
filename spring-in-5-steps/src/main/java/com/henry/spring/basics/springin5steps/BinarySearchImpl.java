@@ -1,7 +1,12 @@
 package com.henry.spring.basics.springin5steps;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class BinarySearchImpl {
 
+    @Autowired
     private SortAlgorithm sortAlgorithm;
 
     //this constructor allows us to decouple BubbleSort...
