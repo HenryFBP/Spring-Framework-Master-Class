@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 public class BinarySearchImpl {
 
     @Autowired
-    private SortAlgorithm foobarAlgorithm;
+    private SortAlgorithm bubbleSortAlgorithm;
 
     // private SortAlgorithm bubbleSortAlgorithm; //require dep by name. Spring actually looks at the name of the field.
 
@@ -22,9 +22,9 @@ public class BinarySearchImpl {
 
         //what if we want to change sortAlgo to "QuickSortAlgorithm"?
         // This is a problem tight coupling brings.
-        int[] sorted = this.foobarAlgorithm.sort(haystack);
+        int[] sorted = this.bubbleSortAlgorithm.sort(haystack);
 
-        System.out.println(this.foobarAlgorithm); //what sort algo are we using?
+        System.out.println(this.bubbleSortAlgorithm); //what sort algo are we using?
 
         //step 2
         //...
