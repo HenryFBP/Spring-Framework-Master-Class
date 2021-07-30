@@ -3,8 +3,8 @@ package com.henry.spring.basics.springin5steps;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-@Component
 @Primary //prefer this bean
+@Component()
 public class BubbleSortAlgorithm implements SortAlgorithm {
 
     @Override
