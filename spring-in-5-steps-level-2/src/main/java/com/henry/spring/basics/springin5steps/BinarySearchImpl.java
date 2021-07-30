@@ -1,13 +1,15 @@
 package com.henry.spring.basics.springin5steps;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class BinarySearchImpl {
 
     @Autowired
-    private SortAlgorithm bubbleSortAlgorithm;
+    @Qualifier("quick")
+    private SortAlgorithm sortAlgorithm;
 
     // private SortAlgorithm bubbleSortAlgorithm; //require dep by name. Spring actually looks at the name of the field.
 
@@ -22,9 +24,9 @@ public class BinarySearchImpl {
 
         //what if we want to change sortAlgo to "QuickSortAlgorithm"?
         // This is a problem tight coupling brings.
-        int[] sorted = this.bubbleSortAlgorithm.sort(haystack);
+        int[] sorted = this.sortAlgorithm.sort(haystack);
 
-        System.out.println(this.bubbleSortAlgorithm); //what sort algo are we using?
+        System.out.println(this.sortAlgorithm); //what sort algo are we using?
 
         //step 2
         //...
