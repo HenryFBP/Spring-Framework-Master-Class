@@ -9,11 +9,6 @@ public class BinarySearchImpl {
     @Autowired
     private SortAlgorithm sortAlgorithm;
 
-    //this constructor allows us to decouple BubbleSort...
-    public BinarySearchImpl(SortAlgorithm sortAlgorithm) {
-        this.sortAlgorithm = sortAlgorithm;
-    }
-
     public int binarySearch(int[] haystack, int needle) {
         /*
         1. sort array with tightly coupled bubble sort algo (NOT some ambiguous algo)
