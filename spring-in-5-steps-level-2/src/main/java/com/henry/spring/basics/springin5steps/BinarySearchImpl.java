@@ -2,9 +2,13 @@ package com.henry.spring.basics.springin5steps;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import static org.springframework.beans.factory.config.BeanDefinition.SCOPE_PROTOTYPE;
+
 @Component
+@Scope(SCOPE_PROTOTYPE) //give a new bean whenever requested...
 public class BinarySearchImpl {
 
     @Autowired
