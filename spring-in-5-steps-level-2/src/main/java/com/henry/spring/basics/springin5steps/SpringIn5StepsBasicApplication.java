@@ -1,23 +1,26 @@
 package com.henry.spring.basics.springin5steps;
 
 import com.henry.spring.basics.springin5steps.basic.BinarySearchImpl;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
-@SpringBootApplication
+@Configuration
+@ComponentScan("com.henry.spring.basics.springin5steps.basic")
 public class SpringIn5StepsBasicApplication {
 
     public static void main(String[] args) {
 
         System.out.println("hello world!");
-        ApplicationContext applicationContext = SpringApplication.run(SpringIn5StepsBasicApplication.class, args);
+
+        AnnotationConfigApplicationContext acac =
+                new AnnotationConfigApplicationContext(SpringIn5StepsBasicApplication.class);
 
         //get BinarySearchImpl from app context
-        BinarySearchImpl binarySearch = applicationContext.getBean(BinarySearchImpl.class);
+        BinarySearchImpl binarySearch = acac.getBean(BinarySearchImpl.class);
 
         //test bean scopes...do we get the same class instance?
-        BinarySearchImpl binarySearch2 = applicationContext.getBean(BinarySearchImpl.class);
+        BinarySearchImpl binarySearch2 = acac.getBean(BinarySearchImpl.class);
         System.out.println(binarySearch);
         System.out.println(binarySearch2);
         System.out.println(binarySearch == binarySearch2); //
