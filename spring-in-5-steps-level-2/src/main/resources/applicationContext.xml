@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- these cause Spring to scan these packages for beans and include them in the ApplicationContext -->
+    <context:component-scan base-package="com.henry.spring.basics.springin5steps.basic"/>
+    <context:component-scan base-package="com.henry.spring.basics.springin5steps.cdi"/>
+    <context:component-scan base-package="com.henry.spring.basics.springin5steps.scope"/>
 
     <bean id="xmlJdbcConnection"
           class="com.henry.spring.basics.springin5steps.xml.XMLJdbcConnection">
