@@ -11,7 +11,7 @@
 
     <bean id="xmlPersonDao"
           class="com.henry.spring.basics.springin5steps.xml.XMLPersonDAO">
-        <property name="xmlJdbcConnection" ref="xmlJdbcConnection"/>
+        <property name="jdbcConnection" ref="xmlJdbcConnection"/>
         <!-- collaborators and configuration for this bean go here -->
     </bean>
 
