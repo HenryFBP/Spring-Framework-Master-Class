@@ -1,12 +1,11 @@
 package com.henry.mockitodemo
 
-import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
-class SomeBusinessTest {
+class SomeBusinessStubTest {
 
     @Test
     fun testFindGreatest() {
