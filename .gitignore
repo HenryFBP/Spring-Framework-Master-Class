@@ -4,3 +4,6 @@ gradle/
 build/
 gradlew
 gradlew.bat
+mvnw
+mvnw.cmd
+.mvn/
