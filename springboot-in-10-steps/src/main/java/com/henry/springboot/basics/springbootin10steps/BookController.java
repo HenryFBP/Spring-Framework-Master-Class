@@ -12,7 +12,7 @@ public class BookController {
     @GetMapping("/books")
     public List<Book> getAllBooks(){
         return Arrays.asList(
-                new Book(1,"Mastering Spring", "Ranga Karanam")
+                new Book(1,"Mastering Spring 5.1", "Ranga Karanam")
         );
         //gee, wonder how this returns JSON when queried...magic? or spring?
     }

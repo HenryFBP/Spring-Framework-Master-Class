@@ -12,7 +12,7 @@ public class SpringbootIn10StepsApplication {
 	public static void main(String[] args) {
 		ApplicationContext ac = SpringApplication.run(SpringbootIn10StepsApplication.class, args);
 
-		Arrays.stream(ac.getBeanDefinitionNames()).forEachOrdered(System.out::println);
+ //		Arrays.stream(ac.getBeanDefinitionNames()).forEachOrdered(System.out::println);
 	}
 
 }
