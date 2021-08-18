@@ -1,5 +1,6 @@
-package com.henry.spring.aop.springaop;
+package com.henry.spring.aop.springaop.business;
 
+import com.henry.spring.aop.springaop.dao.DAO2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,10 +1,9 @@
-package com.henry.spring.aop.springaop;
+package com.henry.spring.aop.springaop.dao;
 
 import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
 
 @Repository
-public class DAO1 {
+public class DAO2 {
     public String retrieveSomething(){
     return this.getClass().getSimpleName();
     }
