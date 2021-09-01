@@ -31,5 +31,11 @@ public class SpringAopApplication implements CommandLineRunner {
 
 		logger.info(business1.calcSomething());
 		logger.info(business2.calcSomething());
+
+		//try to trigger a random failure
+		business2.calcSomething();
+		business2.calcSomething();
+		business2.calcSomething();
+		business2.calcSomething();
 	}
 }

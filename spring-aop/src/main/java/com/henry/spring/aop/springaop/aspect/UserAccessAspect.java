@@ -29,7 +29,7 @@ public class UserAccessAspect {
     @Before("execution(* com.henry.spring.aop.springaop.business.*.*(..))") //pass a pointcut to before annotation
     public void before(JoinPoint joinPoint){
         //what do I do?
-        logger.info("Checking user access");
-        logger.info("Allowing execution - {}",joinPoint);
+//        logger.info("Checking user access");
+//        logger.info("Allowing execution - {}",joinPoint);
     }
 }
